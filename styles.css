@@ -209,7 +209,7 @@ section {
 
 .contact-section {
     text-align: center;
-    padding: 4rem 0;
+    padding: 4rem 2rem;
     background: white;
     border-radius: 20px;
     margin: 2rem 0;
@@ -218,24 +218,52 @@ section {
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .bounce-animation {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 1rem 2rem;
     background: var(--background-color);
     border-radius: 30px;
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    min-width: 160px;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.contact-text {
+    font-size: 1.1rem;
 }
 
 .bounce-animation:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .bounce-animation {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
 }
 
 footer {
